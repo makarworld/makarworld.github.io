@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RockPaperScissors Dapp</title>
+    <link rel = "stylesheet" href = "style.css">
+    <script src="https://cdn.ethers.io/lib/ethers-5.4.umd.min.js"
+        type="application/javascript"></script>
+    <script src = "script.js"></script>
+
+</head>
+<body>
+    <div>
+        <h1> Rock Paper Scissors Dapp</h1>
+        <p> [Game with pseudo random] Add amount in BNB to play</p>
+        <input type="number" min = "0" id = "amountInEth">
+        <button onclick="playGame(1, 'pseudo')">ROCK</button>
+        <button onclick="playGame(2, 'pseudo')">PAPER</button>
+        <button onclick="playGame(3, 'pseudo')">SCISSORS</button>
+
+        <button onclick="handleEvent()">event</button>
+
+    </div>
+
+    <div>
+        <p> [Game with real random] Add amount in BNB to play</p>
+        <input type="number" min = "0" id = "amountInEth">
+        <button onclick="playGame(1, 'real')">ROCK</button>
+        <button onclick="playGame(2, 'real')">PAPER</button>
+        <button onclick="playGame(3, 'real')">SCISSORS</button>
+
+        <button onclick="handleEvent()">event</button>
+
+    </div>
+    <div>
+        <p><b>Result:</b> <span id="resultLog"></p>
+    </div>
+
+</body>
+</html>
