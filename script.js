@@ -448,7 +448,7 @@ async function playGame(_option, random_type){
 
 async function handleEvent(){
 
-    let queryResult =  await contract.queryFilter('CoinFlipped', await provider.getBlockNumber() - 10000, await provider.getBlockNumber());
+    let queryResult =  await contract.queryFilter('PlayGame', await provider.getBlockNumber() - 10000, await provider.getBlockNumber());
     let queryResultRecent = queryResult[queryResult.length-1]
     let amount = await queryResultRecent.args.amount.toString();
     let player = await queryResultRecent.args.player.toString();
